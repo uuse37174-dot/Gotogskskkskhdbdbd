@@ -235,18 +235,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-sky-500/10" id="main-app-container">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-pink-500/10" id="main-app-container">
       {/* Top Header Navigation bar */}
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200" id="app-header">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-400 to-sky-600 flex items-center justify-center text-white shadow-md shadow-sky-500/10">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-400 to-rose-500 flex items-center justify-center text-white shadow-md shadow-pink-500/10">
               <Send className="w-5.5 h-5.5 transform -rotate-12 translate-x-px -translate-y-px" />
             </div>
             <div>
               <h1 className="text-base font-bold text-slate-800 tracking-tight flex items-center space-x-1.5">
                 <span>Telegram Blaster</span>
-                <span className="bg-sky-500/10 text-sky-700 text-[10px] px-2 py-0.5 rounded-full font-bold">
+                <span className="bg-pink-500/10 text-pink-700 text-[10px] px-2 py-0.5 rounded-full font-bold">
                   v1.2 Full-Stack
                 </span>
               </h1>
@@ -260,7 +260,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={handleInstallClick}
-                className="hidden sm:flex items-center space-x-1.5 bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs px-3.5 py-2 rounded-lg shadow-sm transition-colors cursor-pointer"
+                className="hidden sm:flex items-center space-x-1.5 bg-pink-500 hover:bg-pink-600 text-white font-bold text-xs px-3.5 py-2 rounded-lg shadow-sm transition-colors cursor-pointer"
                 id="header-install-btn"
               >
                 <MonitorSmartphone className="w-4 h-4" />
@@ -282,9 +282,9 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
         {/* PWA Mobile/Desktop Install Promotion Banner */}
         {showInstallBanner && (
-          <div className="bg-sky-50 border border-sky-100 p-4 rounded-xl flex items-center justify-between shadow-xs" id="install-promotion-banner">
-            <div className="flex items-center space-x-3 text-sky-900">
-              <div className="bg-sky-500 text-white p-2 rounded-lg hidden sm:block">
+          <div className="bg-pink-50 border border-pink-100 p-4 rounded-xl flex items-center justify-between shadow-xs" id="install-promotion-banner">
+            <div className="flex items-center space-x-3 text-pink-900">
+              <div className="bg-pink-500 text-white p-2 rounded-lg hidden sm:block">
                 <MonitorSmartphone className="w-5 h-5" />
               </div>
               <div>
@@ -296,7 +296,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={handleInstallClick}
-                className="bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs px-4 py-2 rounded-lg shadow-sm transition-colors cursor-pointer"
+                className="bg-pink-500 hover:bg-pink-600 text-white font-bold text-xs px-4 py-2 rounded-lg shadow-sm transition-colors cursor-pointer"
               >
                 Install App
               </button>

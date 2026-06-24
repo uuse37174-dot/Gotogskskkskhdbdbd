@@ -40,7 +40,7 @@ export default function MessageTemplatesConfig({
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-6" id="message-templates-card">
       <div className="flex items-center space-x-2 pb-3 border-b border-slate-100">
-        <MessageSquare className="w-5 h-5 text-amber-500" />
+        <MessageSquare className="w-5 h-5 text-pink-500" />
         <h2 className="text-base font-semibold text-slate-800">Message Templates</h2>
       </div>
 
@@ -62,7 +62,7 @@ export default function MessageTemplatesConfig({
                 placeholder="e.g. Daily Promo, Weekly News, Warning Alert"
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
-                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 text-slate-800"
+                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-800"
                 id="message-template-name-input"
                 required
               />
@@ -79,7 +79,7 @@ export default function MessageTemplatesConfig({
                 value={contentInput}
                 onChange={(e) => setContentInput(e.target.value)}
                 rows={5}
-                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 text-slate-800"
+                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-800"
                 id="message-template-content-textarea"
                 required
               />
@@ -87,7 +87,7 @@ export default function MessageTemplatesConfig({
 
             <button
               type="submit"
-              className="w-full py-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm rounded-lg shadow-sm transition-colors flex items-center justify-center space-x-1.5 cursor-pointer"
+              className="w-full py-2 bg-pink-600 hover:bg-pink-700 text-white font-semibold text-sm rounded-lg shadow-sm transition-colors flex items-center justify-center space-x-1.5 cursor-pointer"
               id="submit-msg-template-btn"
             >
               <Plus className="w-4 h-4" />
@@ -115,7 +115,7 @@ export default function MessageTemplatesConfig({
                   key={tmpl.id}
                   className={`border rounded-xl transition-all ${
                     activeId === tmpl.id
-                      ? "border-amber-500 bg-amber-50/10 shadow-sm"
+                      ? "border-pink-500 bg-pink-50/10 shadow-sm"
                       : "border-slate-200 hover:border-slate-300 bg-white"
                   }`}
                   id={`msg-template-item-${tmpl.id}`}
@@ -147,7 +147,7 @@ export default function MessageTemplatesConfig({
                         <button
                           type="button"
                           onClick={() => onSelectTemplate(tmpl)}
-                          className="bg-sky-50 hover:bg-sky-100 text-sky-700 text-[10px] font-bold px-2 py-1 rounded-md transition-colors cursor-pointer mr-1"
+                          className="bg-pink-50 hover:bg-pink-100 text-pink-700 text-[10px] font-bold px-2 py-1 rounded-md transition-colors cursor-pointer mr-1"
                           title="Load into Composer"
                         >
                           Load
@@ -181,7 +181,7 @@ export default function MessageTemplatesConfig({
                           <button
                             type="button"
                             onClick={() => onSelectTemplate(tmpl)}
-                            className="bg-sky-500 hover:bg-sky-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs transition-colors cursor-pointer"
+                            className="bg-pink-500 hover:bg-pink-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs transition-colors cursor-pointer"
                           >
                             Use This Template
                           </button>

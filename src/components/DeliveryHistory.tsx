@@ -19,7 +19,7 @@ export default function DeliveryHistory({ logs, onClearHistory, onRemoveLog }: D
     <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-5" id="delivery-history-card">
       <div className="flex items-center justify-between pb-3 border-b border-slate-100">
         <div className="flex items-center space-x-2">
-          <History className="w-5 h-5 text-indigo-500" />
+          <History className="w-5 h-5 text-pink-500" />
           <h2 className="text-base font-semibold text-slate-800">Delivery History Logs</h2>
         </div>
         {logs.length > 0 && (

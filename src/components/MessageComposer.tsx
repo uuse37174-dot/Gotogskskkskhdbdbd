@@ -204,7 +204,7 @@ export default function MessageComposer({
     <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-6" id="message-composer-card">
       <div className="flex items-center justify-between pb-3 border-b border-slate-100">
         <div className="flex items-center space-x-2">
-          <Send className="w-5 h-5 text-sky-500" />
+          <Send className="w-5 h-5 text-pink-500" />
           <h2 className="text-base font-semibold text-slate-800">Message Broadcast Composer</h2>
         </div>
         <button
@@ -232,7 +232,7 @@ export default function MessageComposer({
               <select
                 value={selectedBotId}
                 onChange={(e) => setSelectedBotId(e.target.value)}
-                className="w-full px-3.5 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 text-slate-800 font-semibold cursor-pointer"
+                className="w-full px-3.5 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-800 font-semibold cursor-pointer"
                 id="composer-bot-select"
               >
                 {bots.map((bot) => (
@@ -257,7 +257,7 @@ export default function MessageComposer({
               <select
                 value={selectedTemplateId}
                 onChange={(e) => handleTemplateChange(e.target.value)}
-                className="w-full px-3.5 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 text-slate-700 cursor-pointer"
+                className="w-full px-3.5 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-700 cursor-pointer"
                 id="composer-template-select"
               >
                 <option value="">-- Manual Draft / Customize Message --</option>
@@ -288,7 +288,7 @@ export default function MessageComposer({
               if (selectedTemplateId) setSelectedTemplateId("");
             }}
             rows={6}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 text-slate-800 leading-relaxed font-sans placeholder:text-slate-400"
+            className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-800 leading-relaxed font-sans placeholder:text-slate-400"
             id="composer-message-textarea"
             required
           />
@@ -350,7 +350,7 @@ export default function MessageComposer({
                 value={extraChats}
                 onChange={(e) => setExtraChats(e.target.value)}
                 rows={3}
-                className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs font-mono placeholder:font-sans focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 text-slate-800"
+                className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs font-mono placeholder:font-sans focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-800"
                 id="composer-extra-chats-textarea"
               />
             </div>
@@ -364,7 +364,7 @@ export default function MessageComposer({
             <span className="font-medium">
               Resolved target chats to deliver:
             </span>
-            <span className="bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded-full text-xs">
+            <span className="bg-pink-100 text-pink-800 font-bold px-2 py-0.5 rounded-full text-xs">
               {finalTargets.length} group{finalTargets.length !== 1 ? "s" : ""}
             </span>
           </div>
@@ -382,7 +382,7 @@ export default function MessageComposer({
           <button
             type="submit"
             disabled={sendStatus === "sending" || bots.length === 0 || finalTargets.length === 0}
-            className="w-full py-3.5 bg-sky-500 hover:bg-sky-600 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg disabled:shadow-none transition-all flex items-center justify-center space-x-2 cursor-pointer"
+            className="w-full py-3.5 bg-pink-500 hover:bg-pink-600 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg disabled:shadow-none transition-all flex items-center justify-center space-x-2 cursor-pointer"
             id="send-blast-btn"
           >
             {sendStatus === "sending" ? (
@@ -422,7 +422,7 @@ export default function MessageComposer({
             id="realtime-progress-visualizer"
           >
             <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-              <span className="flex items-center space-x-2 text-sky-400 font-bold">
+              <span className="flex items-center space-x-2 text-pink-400 font-bold">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                 <span>Blaster Output Stream</span>
               </span>
@@ -442,7 +442,7 @@ export default function MessageComposer({
                 &gt; Request dispatched to server API. Awaiting delivery acknowledgement...
               </div>
               <div className="flex items-center space-x-2 pt-2 text-slate-400">
-                <Loader2 className="w-3.5 h-3.5 animate-spin text-sky-400" />
+                <Loader2 className="w-3.5 h-3.5 animate-spin text-pink-400" />
                 <span>Communicating with Telegram Bot API endpoints...</span>
               </div>
             </div>

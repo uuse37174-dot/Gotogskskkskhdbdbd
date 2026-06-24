@@ -13,7 +13,7 @@ export default function SetupGuide() {
         id="toggle-guide-btn"
       >
         <div className="flex items-center space-x-3">
-          <HelpCircle className="w-5 h-5 text-sky-500" />
+          <HelpCircle className="w-5 h-5 text-pink-500" />
           <div>
             <h3 className="text-sm font-semibold text-slate-800">New to Telegram Bots? Read the Setup Guide</h3>
             <p className="text-xs text-slate-500">Learn how to create a bot, get group IDs, and ensure messages deliver.</p>
@@ -38,11 +38,11 @@ export default function SetupGuide() {
             <div className="p-5 border-t border-slate-100 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-600 bg-white">
               <div className="space-y-3" id="guide-step-1">
                 <div className="flex items-center space-x-2 font-semibold text-slate-800">
-                  <BotIcon className="w-4 h-4 text-sky-500" />
+                  <BotIcon className="w-4 h-4 text-pink-500" />
                   <span>1. Create a Bot & Get Token</span>
                 </div>
                 <ol className="list-decimal list-inside space-y-1.5 text-xs leading-relaxed text-slate-500 pl-1">
-                  <li>Search for <a href="https://t.me/BotFather" target="_blank" rel="noreferrer" className="text-sky-600 hover:underline font-medium">@BotFather</a> on Telegram.</li>
+                  <li>Search for <a href="https://t.me/BotFather" target="_blank" rel="noreferrer" className="text-pink-600 hover:underline font-medium">@BotFather</a> on Telegram.</li>
                   <li>Send <code className="bg-slate-100 px-1 py-0.5 rounded text-rose-600">/newbot</code> and follow instructions.</li>
                   <li>Copy the HTTP API Token (looks like <code className="bg-slate-100 px-1 py-0.5 rounded text-slate-700">123456:ABC-def...</code>).</li>
                   <li>Go to the <strong>Bot Configuration</strong> section on this site and add it.</li>
@@ -78,7 +78,7 @@ export default function SetupGuide() {
                   <div>&lt;b&gt;<b>Bold Text</b>&lt;/b&gt;</div>
                   <div>&lt;i&gt;<i>Italic Text</i>&lt;/i&gt;</div>
                   <div>&lt;code&gt;<code className="bg-slate-200 px-0.5 rounded">code snippet</code>&lt;/code&gt;</div>
-                  <div>&lt;a href="url"&gt;<span className="text-sky-600 underline">Link Text</span>&lt;/a&gt;</div>
+                  <div>&lt;a href="url"&gt;<span className="text-pink-600 underline">Link Text</span>&lt;/a&gt;</div>
                 </div>
                 <div className="flex items-start space-x-1.5 text-[10px] text-amber-600 bg-amber-50 p-2 rounded border border-amber-100">
                   <AlertCircle className="w-3.5 h-3.5 shrink-0 mt-0.5" />

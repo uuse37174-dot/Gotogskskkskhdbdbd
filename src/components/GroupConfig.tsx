@@ -83,7 +83,7 @@ export default function GroupConfig({
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-6" id="group-config-card">
       <div className="flex items-center space-x-2 pb-3 border-b border-slate-100">
-        <Users className="w-5 h-5 text-emerald-500" />
+        <Users className="w-5 h-5 text-pink-500" />
         <h2 className="text-base font-semibold text-slate-800">Group Templates</h2>
       </div>
 
@@ -105,7 +105,7 @@ export default function GroupConfig({
                 placeholder="e.g. My Channel List, Admin Groups"
                 value={templateName}
                 onChange={(e) => setTemplateName(e.target.value)}
-                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-slate-800"
+                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-800"
                 id="template-name-input"
                 required
               />
@@ -120,7 +120,7 @@ export default function GroupConfig({
                 value={chatsInput}
                 onChange={(e) => setChatsInput(e.target.value)}
                 rows={4}
-                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm font-mono placeholder:font-sans focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-slate-800"
+                className="w-full px-3 py-1.5 border border-slate-200 rounded-lg text-sm font-mono placeholder:font-sans focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 text-slate-800"
                 id="template-chats-textarea"
               />
               <p className="text-[10px] text-slate-400 mt-1 flex items-start space-x-1">
@@ -131,7 +131,7 @@ export default function GroupConfig({
 
             <button
               type="submit"
-              className="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm rounded-lg shadow-sm transition-colors flex items-center justify-center space-x-1.5 cursor-pointer"
+              className="w-full py-2 bg-pink-600 hover:bg-pink-700 text-white font-semibold text-sm rounded-lg shadow-sm transition-colors flex items-center justify-center space-x-1.5 cursor-pointer"
               id="submit-template-btn"
             >
               <Plus className="w-4 h-4" />
@@ -159,7 +159,7 @@ export default function GroupConfig({
                   key={tmpl.id}
                   className={`border rounded-xl transition-all ${
                     activeTemplateId === tmpl.id
-                      ? "border-emerald-500 bg-emerald-50/10 shadow-sm"
+                      ? "border-pink-500 bg-pink-50/10 shadow-sm"
                       : "border-slate-200 hover:border-slate-300 bg-white"
                   }`}
                   id={`template-item-${tmpl.id}`}
@@ -238,11 +238,11 @@ export default function GroupConfig({
                           placeholder="Add link, @username, or chat ID"
                           value={newChatInput}
                           onChange={(e) => setNewChatInput(e.target.value)}
-                          className="flex-1 px-2.5 py-1 border border-slate-200 rounded-md text-xs font-mono focus:outline-none focus:ring-1 focus:ring-emerald-500 text-slate-800"
+                          className="flex-1 px-2.5 py-1 border border-slate-200 rounded-md text-xs font-mono focus:outline-none focus:ring-1 focus:ring-pink-500 text-slate-800"
                         />
                         <button
                           type="submit"
-                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-2.5 py-1 rounded-md text-xs flex items-center space-x-0.5 cursor-pointer"
+                          className="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-2.5 py-1 rounded-md text-xs flex items-center space-x-0.5 cursor-pointer"
                         >
                           <Plus className="w-3 h-3" />
                           <span>Add</span>

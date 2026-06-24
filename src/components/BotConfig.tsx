@@ -77,7 +77,7 @@ export default function BotConfig({
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-5" id="bot-config-card">
       <div className="flex items-center space-x-2 pb-3 border-b border-slate-100">
-        <BotIcon className="w-5 h-5 text-sky-500" />
+        <BotIcon className="w-5 h-5 text-pink-500" />
         <h2 className="text-base font-semibold text-slate-800">Bot Configuration</h2>
       </div>
 
@@ -96,13 +96,13 @@ export default function BotConfig({
               placeholder="1234567890:ABCdefGhIJKlmNoPQRsTUVwxyZ..."
               value={tokenInput}
               onChange={(e) => setTokenInput(e.target.value)}
-              className="w-full pl-9 pr-24 py-2 border border-slate-200 rounded-lg text-sm font-mono placeholder:font-sans focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all text-slate-800"
+              className="w-full pl-9 pr-24 py-2 border border-slate-200 rounded-lg text-sm font-mono placeholder:font-sans focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 transition-all text-slate-800"
               id="bot-token-input"
             />
             <button
               type="submit"
               disabled={isValidating}
-              className="absolute right-1.5 top-1.5 bottom-1.5 bg-sky-500 hover:bg-sky-600 disabled:bg-slate-300 text-white text-xs font-semibold px-4 rounded-md transition-colors flex items-center space-x-1 cursor-pointer"
+              className="absolute right-1.5 top-1.5 bottom-1.5 bg-pink-500 hover:bg-pink-600 disabled:bg-slate-300 text-white text-xs font-semibold px-4 rounded-md transition-colors flex items-center space-x-1 cursor-pointer"
               id="validate-bot-btn"
             >
               {isValidating ? (
@@ -155,7 +155,7 @@ export default function BotConfig({
                   key={bot.id}
                   className={`group flex items-center justify-between p-3 border rounded-lg transition-all ${
                     isActive
-                      ? "border-sky-500 bg-sky-50/40 shadow-sm"
+                      ? "border-pink-500 bg-pink-50/40 shadow-sm"
                       : "border-slate-200 hover:border-slate-300 bg-white"
                   }`}
                   id={`bot-item-${bot.id}`}
@@ -167,7 +167,7 @@ export default function BotConfig({
                   >
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                        isActive ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-500"
+                        isActive ? "bg-pink-500 text-white" : "bg-slate-100 text-slate-500"
                       }`}
                     >
                       {isActive ? <Check className="w-4 h-4" /> : <BotIcon className="w-4 h-4" />}
@@ -176,7 +176,7 @@ export default function BotConfig({
                       <div className="text-xs font-semibold text-slate-700 flex items-center space-x-1.5">
                         <span>{bot.name}</span>
                         {isActive && (
-                          <span className="bg-sky-100 text-sky-700 text-[10px] px-1.5 py-0.5 rounded-full font-medium">
+                          <span className="bg-pink-100 text-pink-700 text-[10px] px-1.5 py-0.5 rounded-full font-medium">
                             Active
                           </span>
                         )}
