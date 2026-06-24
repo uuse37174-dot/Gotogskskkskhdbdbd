@@ -334,7 +334,7 @@ export default function App() {
             {/* Backup & Restore Panel for robust "Stores all the data" support */}
             <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4" id="backup-restore-card">
               <div className="flex items-center space-x-2 pb-3 border-b border-slate-100">
-                <Download className="w-5 h-5 text-emerald-500" />
+                <Download className="w-5 h-5 text-pink-500" />
                 <h2 className="text-base font-semibold text-slate-800">Backup & Sync Data</h2>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed">
