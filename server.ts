@@ -1,10 +1,7 @@
 import express from "express";
 import path from "path";
-import { fileURLToPath } from "url";
 import app from "./api/index.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const PORT = 3000;
 
 // Vite middleware for development

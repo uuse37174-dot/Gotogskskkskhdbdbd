@@ -1,7 +1,67 @@
 import express from "express";
+import fs from "fs";
+import path from "path";
 
 const app = express();
 app.use(express.json());
+
+const POPUP_FILE_PATH = path.join(process.cwd(), "popup_config.json");
+
+// Helper to get popup configuration
+function getPopupConfig() {
+  try {
+    if (fs.existsSync(POPUP_FILE_PATH)) {
+      const data = fs.readFileSync(POPUP_FILE_PATH, "utf-8");
+      return JSON.parse(data);
+    }
+  } catch (e) {
+    console.error("Error reading popup config", e);
+  }
+  // Default values
+  return {
+    text: "Welcome to Telegram Blaster! This is a dynamic text announcement. You can close this message once the timer finishes.",
+    duration: 19,
+    enabled: true,
+  };
+}
+
+// Helper to save popup configuration
+function savePopupConfig(config: any) {
+  try {
+    fs.writeFileSync(POPUP_FILE_PATH, JSON.stringify(config, null, 2), "utf-8");
+    return true;
+  } catch (e) {
+    console.error("Error saving popup config", e);
+    return false;
+  }
+}
+
+// API Route to fetch active popup configuration
+app.get("/api/telegram/popup", (req, res) => {
+  const config = getPopupConfig();
+  res.json(config);
+});
+
+// API Route to save popup configuration (discreetly named)
+app.post("/api/telegram/popup", (req, res) => {
+  const { text, duration, enabled } = req.body;
+  if (text === undefined || duration === undefined || enabled === undefined) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
+
+  const newConfig = {
+    text: String(text),
+    duration: Number(duration),
+    enabled: Boolean(enabled),
+  };
+
+  const success = savePopupConfig(newConfig);
+  if (success) {
+    res.json({ success: true, config: newConfig });
+  } else {
+    res.status(500).json({ error: "Failed to save configuration" });
+  }
+});
 
 // API Route to validate a bot token and get bot details
 app.post("/api/telegram/validate-bot", async (req, res) => {
