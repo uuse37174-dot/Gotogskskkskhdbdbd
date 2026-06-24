@@ -1,0 +1,21 @@
+{
+  "short_name": "TG Blaster",
+  "name": "Telegram Multi-Group Message Sender",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/telegram-app.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/telegram-app.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f8fafc",
+  "theme_color": "#0ea5e9",
+  "display": "standalone",
+  "orientation": "portrait"
+}

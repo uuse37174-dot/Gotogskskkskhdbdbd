@@ -1,0 +1,6 @@
+{
+  "name": "Telegram Multi-Group Message Sender",
+  "description": "Configure Telegram bots, manage message and group templates, and blast messages to multiple groups simultaneously in seconds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
